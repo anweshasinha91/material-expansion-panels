@@ -30,9 +30,13 @@
     <link href="css/docs.css" rel="stylesheet">
     <link href="vendor/highlight/styles/vs.css" rel="stylesheet">
     <link rel="stylesheet" href="css/zippy.css">
+    <link rel="stylesheet" href="css/material-expansion-panels.css">
     <style>
         .md-header__menu-button{
             top: 25%;
+        }
+        .md-container{
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -47,25 +51,28 @@
     </div>
 </header>
 
-<section class="zippy suggestion-list-expand" id="expand-1">
-    <div class="zippy__wrapper">
-        <div class="suggestion-list">
-            <a href="#" class="md-button suggestion-list__item">
-                <span class="query-text">amazon</span>
-            </a>
-            <a href="#" class="md-button suggestion-list__item">
-                <span class="query-text">flipkart</span>
-            </a>
-            <a href="#" class="md-button suggestion-list__item">
-                <span class="query-text">snapdeal</span>
-            </a>
+<div class="md-container md-container--box">
+    <div class="md-row" >
+        <div class="md-col">
+            <div class="md-expansion-panel">
+                <div class="md-expansion-panel__header">
+                    <div class="md-expansion-panel__header-body">
+                        Click to Expand the Content
+                    </div>
+                    <div class="md-expansion-panel__header-button">
+                        <button class="md-button md-button--icon" data-toggle="zippy" data-target="#expand-1"><i class="material-icons">expand_more</i></button>
+                    </div>
+                </div>
+                <div class="zippy" id="expand-1">
+                    <div class="md-expansion-panel__wrapper zippy__wrapper">
+                        <div class="md-expansion-panel__body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex fugiat in modi obcaecati odio praesentium ratione similique sint velit voluptatem! Alias aliquam amet enim facere fugiat impedit in iure laboriosam magni minus molestias necessitatibus nobis odio pariatur placeat quae soluta, unde! Amet consequatur consequuntur, illum iste laboriosam porro quis reprehenderit?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</section>
-<div class="layout-m-t-2 text-center">
-    <button class="md-button md-button--primary md-button--raised" data-toggle="zippy" data-target="#expand-1">
-        Toggle zippy
-    </button>
 </div>
 
 <script src="js/jquery.js"></script>
